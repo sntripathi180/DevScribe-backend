@@ -125,6 +125,14 @@ STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
+import os
+
+
+if not DEBUG:
+    MEDIA_URL = "https://your-backend-service.onrender.com/media/"
+else:
+    MEDIA_URL = "/media/"
+
 
 
 # Default primary key field type
@@ -152,7 +160,6 @@ CORS_ALLOWED_ORIGINS = [
 "http://localhost:5174",
 "http://localhost:5175",
 "http://localhost:3000",
-"https://devfolio-xvbo.onrender.com",
-"https://devscribe.onrender.com",
+
 "https://devscribe-bxtb.onrender.com"
 ]
