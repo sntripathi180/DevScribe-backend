@@ -126,7 +126,7 @@ STATIC_ROOT = BASE_DIR / "static"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 import os
-https://stackstories-backend.onrender.com/
+
 
 if not DEBUG:
     MEDIA_URL = "https://stackstories-backend.onrender.com/media/"
