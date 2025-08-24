@@ -93,7 +93,7 @@ if DEBUG:  # Local development → use SQLite
 else:  # Production (Render) → use Postgres
     DATABASES = {
         'default': dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost:5432/devscribe',
+            default='postgresql://postgres:postgres@localhost:5432/mysite',
             conn_max_age=600
         )
     }
