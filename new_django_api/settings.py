@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,10 +72,14 @@ TEMPLATES = [
         },
     },
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 WSGI_APPLICATION = 'new_django_api.wsgi.application'
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://stackstories-backend.onrender.com",
+    "https://devscribe-bxtb.onrender.com",
+]
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
